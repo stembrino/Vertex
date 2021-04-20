@@ -7,9 +7,26 @@
     background: #f53d1f !important;
 }
 
-.navigation-section-one-not-selected::after{
-	background-color: #c1c1c1 !important;
+.navigation-section-three::after{
+    background: #1f1e1d !important;
 }
+.navigation-section-four::after{
+    background: #f53d1f !important;
+}
+
+.navigation-section-one-not-selected::after{
+	background-color: #b3b3b3 !important;
+}
+.navigation-section-two-not-selected::after{
+	background-color: #cccccc !important;
+}
+.navigation-section-three-not-selected::after{
+	background-color: #cccccc !important;
+}
+.navigation-section-four-not-selected::after{
+	background-color: #cccccc !important;
+}
+
 
 #awwwards{
 	position: fixed;
