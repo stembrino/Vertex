@@ -61,6 +61,8 @@
       <ul class="menu">
 		<li id="aboutActive"><a onclick="aboutActive()" href="#about">&lt;about&#47;&gt;</a></li>
         <li id="servicesActive"><a onclick="servicesActive()" href="#services">&lt;services&#47;&gt;</a></li>
+			<li id="workActive"><a onclick="workActive()" href="#portfolio">&lt;work&#47;&gt;</a></li>
+        <li id="contactActive"><a onclick="contactActive()" href="#contact">&lt;contact&#47;&gt;</a></li>      
       </ul>
     </div>
   </div>
@@ -88,6 +90,8 @@
     <ul class="subMenu">
       <li><a onclick="aboutActive()" href="#about">About</a></li>
       <li><a onclick="servicesActive()" href="#services">Services</a></li>
+      <li><a onclick="workActive()" href="#portfolio">Work</a></li>
+      <li><a onclick="contactActive()" href="#contact">Contact</a></li>	    
     </ul>
     
     <ul class="social">
@@ -244,6 +248,56 @@
   <div class="background"></div></div>
 </section>
 
+	<!-- Slide 3 (#47) -->
+<section class="slide kenBurns slide-portfolio" data-name="portfolio" onload="workActive()">
+  <div class="content">
+    <div class="container">
+      <div class="wrap" style="padding-bottom: 0px;">
+        <div class="fix-12-12 toCenter">
+          <h1 class="ae-1 textLeft">&lt;work&#47;&gt;</h1>
+		  <div class="ae-6" id="ae-6-text"><span>Providing a seamless online experience.</span></div>
+        </div>
+
+        <div class="fix-12-12">
+		
+            <div style="text-align:left; margin-top:70px;">
+              <div>
+                <a onclick="contactActive()" href="#contact"><span class="scroll_txt Dgris">&lt;scroll.contact&#47;&gt;</span></a>
+              </div>
+            </div>
+		</div>	
+      </div> 
+    </div>
+	<div onclick="contactActive()" class="scroll_down"><a href="#contact"><img src="assets/img/icons/scroll.png"/></a></div>
+  </div>
+  <div class="background"><div class="bg-bar"><img src="assets/img/backgrounds/background-bar.png"/></div></div>
+</section>
+
+<!-- Slide 5 (#92) -->
+<section class="slide fade kenBurns slide-contact" data-name="contact" onload="contactActive()">
+  <div class="content">
+    <div class="container">
+      <div class="wrap" style="padding-bottom: 0px;">
+        <div class="fix-12-12 toCenter">
+          <h1 class="ae-1 textLeft" style="line-height: 0.8">&lt;contact&#47;&gt;</h1>
+          <div class="ae-6" id="ae-6-text"><span>Let’s talk about your project.</span></div>				  
+        </div>	  
+        <div class="fix-12-12">
+				
+		  
+            <div style="text-align:left; margin-top:140px;">
+              <div>
+                <span class="scroll_txt gris">&lt;Copyright@_<script type="text/JavaScript">document.write(new Date().getFullYear());</script>&#47;&gt;</span>
+              </div>
+            </div>		  
+        </div>     
+      </div>
+    </div>
+	<div class="scroll_down rotateTop"><a onclick="aboutActive()" href="#about"><img src="assets/img/icons/scroll.png"/></a></div>
+  </div>
+  <div class="background"><div class="bg-bar"><img src="assets/img/backgrounds/background-bar.png"/></div></div>
+</section>
+	
 <script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
