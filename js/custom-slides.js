@@ -316,11 +316,39 @@ $(document).ready(function() { "use strict";
     //It it first or last stage?
     if (window.stage === 1){
       $body.addClass('firstSlide');
-      updateStageOne()
+      updateStageOne();
+	  // Top Bar Menu colors 
+	  document.getElementById("aboutActive").style.color ="rgb(245, 61, 31)";
+	  document.getElementById("servicesActive").style.color ="rgb(31, 30, 29)";
+	  document.getElementById("workActive").style.color ="rgb(31, 30, 29)";
+	  document.getElementById("contactActive").style.color ="rgb(31, 30, 29)";
     }
-    if ((window.stages === window.stage)&&(window.stages !== 1)) {
+    if (window.stage === 2){
+      $body.addClass('secondSlide');
+      updateStageTwo();
+	  // Top Bar Menu colors
+	  document.getElementById("servicesActive").style.color ="rgb(245, 61, 31)";
+	  document.getElementById("aboutActive").style.color ="rgb(230, 230, 230)";
+	  document.getElementById("workActive").style.color ="rgb(230, 230, 230)";
+	  document.getElementById("contactActive").style.color ="rgb(230, 230, 230)";	  
+    }	
+    if (window.stage === 3){
+      $body.addClass('thirdSlide');
+      updateStageThree();
+	  // Top Bar Menu colors
+	  document.getElementById("workActive").style.color ="rgb(245, 61, 31)";
+	  document.getElementById("aboutActive").style.color ="rgb(31, 30, 29)";
+	  document.getElementById("servicesActive").style.color ="rgb(31, 30, 29)";
+	  document.getElementById("contactActive").style.color ="rgb(31, 30, 29)";	  
+    }	
+    if ((window.stages === window.stage)&&(window.stages !== 1)&&(window.stages !== 2)&&(window.stages !== 3)) {
       $body.addClass('lastSlide');
-      updateStageTwo()
+      updateStageFour();
+	  // Top Bar Menu colors
+	  document.getElementById("contactActive").style.color ="rgb(245, 61, 31)";
+	  document.getElementById("aboutActive").style.color ="rgb(230, 230, 230)";
+	  document.getElementById("servicesActive").style.color ="rgb(230, 230, 230)";
+	  document.getElementById("workActive").style.color ="rgb(230, 230, 230)";		  
     }
     
     $body.removeClassByPrefix("stage-").addClass('stage-'+window.stage);
