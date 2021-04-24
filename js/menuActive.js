@@ -5,35 +5,35 @@ When a section is active, change logo, change color of text in the menu, change 
 function aboutActive() {
   var x = document.getElementById("logo_black");
   var y = document.getElementById("logo_grey");
-		x.style.display = "block";
-		y.style.display = "none";
+  x.style.display = "block";
+  y.style.display = "none";
   document.getElementById("aboutActive").style.color = "rgb(245, 61, 31)";
-  document.getElementById("servicesActive").style.color = "rgb(31, 30, 29)";  
-  document.getElementById("workActive").style.color = "rgb(31, 30, 29)";  
-  document.getElementById("contactActive").style.color = "rgb(31, 30, 29)"; 
-  document.getElementById("myPanel").style.backgroundColor ="Transparent";     
+  document.getElementById("servicesActive").style.color = "rgb(31, 30, 29)";
+  document.getElementById("workActive").style.color = "rgb(31, 30, 29)";
+  document.getElementById("contactActive").style.color = "rgb(31, 30, 29)";
+  document.getElementById("myPanel").style.backgroundColor = "Transparent";
 }
-function servicesActive() { 
+function servicesActive() {
   var x = document.getElementById("logo_black");
   var y = document.getElementById("logo_grey");
-		x.style.display = "none";
-		y.style.display = "block";
+  x.style.display = "none";
+  y.style.display = "block";
   document.getElementById("servicesActive").style.color = "rgb(245, 61, 31)";
-  document.getElementById("aboutActive").style.color = "rgb(230, 230, 230)";  
-  document.getElementById("workActive").style.color = "rgb(230, 230, 230)";  
+  document.getElementById("aboutActive").style.color = "rgb(230, 230, 230)";
+  document.getElementById("workActive").style.color = "rgb(230, 230, 230)";
   document.getElementById("contactActive").style.color = "rgb(230, 230, 230)";
-  document.getElementById("myPanel").style.backgroundColor ="rgb(31, 30, 29, 0.9)";   
-}	 
+  document.getElementById("myPanel").style.backgroundColor = "rgb(31, 30, 29, 0.9)";
+}
 function workActive() {
   var x = document.getElementById("logo_black");
   var y = document.getElementById("logo_grey");
   x.style.display = "block";
   y.style.display = "none";
   document.getElementById("workActive").style.color = "rgb(245, 61, 31)";
-  document.getElementById("aboutActive").style.color = "rgb(31, 30, 29)";    
-  document.getElementById("servicesActive").style.color = "rgb(31, 30, 29)";  
-  document.getElementById("contactActive").style.color = "rgb(31, 30, 29)"; 
-  document.getElementById("myPanel").style.backgroundColor ="rgb(255, 255, 255, 0.95)";   
+  document.getElementById("aboutActive").style.color = "rgb(31, 30, 29)";
+  document.getElementById("servicesActive").style.color = "rgb(31, 30, 29)";
+  document.getElementById("contactActive").style.color = "rgb(31, 30, 29)";
+  document.getElementById("myPanel").style.backgroundColor = "rgb(255, 255, 255, 0.95)";
 }
 function contactActive() {
   var x = document.getElementById("logo_black");
@@ -42,27 +42,47 @@ function contactActive() {
   y.style.display = "block";
   document.getElementById("contactActive").style.color = "rgb(245, 61, 31)";
   document.getElementById("aboutActive").style.color = "rgb(230, 230, 230)";
-  document.getElementById("servicesActive").style.color = "rgb(230, 230, 230)";   
-  document.getElementById("workActive").style.color = "rgb(230, 230, 230)"; 
-  document.getElementById("myPanel").style.backgroundColor ="rgb(31, 30, 29, 0.9)";   
+  document.getElementById("servicesActive").style.color = "rgb(230, 230, 230)";
+  document.getElementById("workActive").style.color = "rgb(230, 230, 230)";
+  document.getElementById("myPanel").style.backgroundColor = "rgb(31, 30, 29, 0.9)";
 }
 
 function updateStageOne() {
+  // Top Bar Menu colors
+  document.getElementById("aboutActive").style.color = "rgb(245, 61, 31)";
+  document.getElementById("servicesActive").style.color = "rgb(31, 30, 29)";
+  document.getElementById("workActive").style.color = "rgb(31, 30, 29)";
+  document.getElementById("contactActive").style.color = "rgb(31, 30, 29)";
   sectionOption().firstSection();
   colorNavigationBar().firstSection();
 }
 
 function updateStageTwo() {
-  sectionOption().secondSection();
+  // Top Bar Menu colors
+  document.getElementById("servicesActive").style.color = "rgb(245, 61, 31)";
+  document.getElementById("aboutActive").style.color = "rgb(230, 230, 230)";
+  document.getElementById("workActive").style.color = "rgb(230, 230, 230)";
+  document.getElementById("contactActive").style.color = "rgb(230, 230, 230)";
   colorNavigationBar().secondSection();
+  sectionOption().secondSection();
 }
 
 function updateStageThree() {
+  // Top Bar Menu colors
+  document.getElementById("workActive").style.color = "rgb(245, 61, 31)";
+  document.getElementById("aboutActive").style.color = "rgb(31, 30, 29)";
+  document.getElementById("servicesActive").style.color = "rgb(31, 30, 29)";
+  document.getElementById("contactActive").style.color = "rgb(31, 30, 29)";
   sectionOption().thirdSection();
   colorNavigationBar().thirdSection();
 }
 
 function updateStageFour() {
+  // Top Bar Menu colors
+  document.getElementById("contactActive").style.color = "rgb(245, 61, 31)";
+  document.getElementById("aboutActive").style.color = "rgb(230, 230, 230)";
+  document.getElementById("servicesActive").style.color = "rgb(230, 230, 230)";
+  document.getElementById("workActive").style.color = "rgb(230, 230, 230)";
   sectionOption().fourthSection();
   colorNavigationBar().fourthSection();
 }
@@ -83,16 +103,16 @@ function sectionOption() {
     logoGray.style.display = BLOCK;
     logoBlack.style.display = NONE;
   };
-  
+
   toggleLogo.thirdSection = function () {
     logoGray.style.display = NONE;
     logoBlack.style.display = BLOCK;
-  }; 
+  };
 
   toggleLogo.fourthSection = function () {
     logoGray.style.display = BLOCK;
     logoBlack.style.display = NONE;
-  };    
+  };
   return toggleLogo;
 }
 
@@ -107,32 +127,31 @@ function colorNavigationBar() {
     navigationBarElements[0].classList.remove("navigation-section-one-not-selected");
     navigationBarElements[0].classList.add("navigation-section-two-not-selected");
     navigationBarElements[0].classList.add("navigation-section-three-not-selected");
-    navigationBarElements[0].classList.add("navigation-section-four-not-selected");	
+    navigationBarElements[0].classList.add("navigation-section-four-not-selected");
   };
   section.secondSection = function () {
     if (!isNavigationElementsRendered()) return;
     navigationBarElements[1].classList.add("navigation-section-two");
-    navigationBarElements[0].classList.remove("navigation-section-two-not-selected");	
+    navigationBarElements[0].classList.remove("navigation-section-two-not-selected");
     navigationBarElements[0].classList.add("navigation-section-one-not-selected");
     navigationBarElements[0].classList.add("navigation-section-three-not-selected");
-    navigationBarElements[0].classList.add("navigation-section-four-not-selected");	
+    navigationBarElements[0].classList.add("navigation-section-four-not-selected");
   };
   section.thirdSection = function () {
     if (!isNavigationElementsRendered()) return;
     navigationBarElements[1].classList.add("navigation-section-third");
-    navigationBarElements[0].classList.remove("navigation-section-third-not-selected");	
+    navigationBarElements[0].classList.remove("navigation-section-third-not-selected");
     navigationBarElements[0].classList.add("navigation-section-one-not-selected");
-    navigationBarElements[0].classList.add("navigation-section-two-not-selected");	
-    navigationBarElements[0].classList.add("navigation-section-four-not-selected");	
-  }; 
+    navigationBarElements[0].classList.add("navigation-section-two-not-selected");
+    navigationBarElements[0].classList.add("navigation-section-four-not-selected");
+  };
   section.fourthSection = function () {
     if (!isNavigationElementsRendered()) return;
     navigationBarElements[1].classList.add("navigation-section-fourth");
-    navigationBarElements[0].classList.remove("navigation-section-fourth-not-selected");	
+    navigationBarElements[0].classList.remove("navigation-section-fourth-not-selected");
     navigationBarElements[0].classList.add("navigation-section-one-not-selected");
-    navigationBarElements[0].classList.add("navigation-section-two-not-selected");	
-    navigationBarElements[0].classList.add("navigation-section-three-not-selected");		
-  };    
+    navigationBarElements[0].classList.add("navigation-section-two-not-selected");
+    navigationBarElements[0].classList.add("navigation-section-three-not-selected");
+  };
   return section;
 }
-
