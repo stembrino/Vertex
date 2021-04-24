@@ -53,8 +53,7 @@ function updateStageOne() {
   document.getElementById("servicesActive").style.color = "rgb(31, 30, 29)";
   document.getElementById("workActive").style.color = "rgb(31, 30, 29)";
   document.getElementById("contactActive").style.color = "rgb(31, 30, 29)";
-  sectionOption().firstSection();
-  colorNavigationBar().firstSection();
+  sectionOptionController().firstSection();
 }
 
 function updateStageTwo() {
@@ -64,7 +63,6 @@ function updateStageTwo() {
   document.getElementById("workActive").style.color = "rgb(230, 230, 230)";
   document.getElementById("contactActive").style.color = "rgb(230, 230, 230)";
   colorNavigationBar().secondSection();
-  sectionOption().secondSection();
 }
 
 function updateStageThree() {
@@ -73,8 +71,7 @@ function updateStageThree() {
   document.getElementById("aboutActive").style.color = "rgb(31, 30, 29)";
   document.getElementById("servicesActive").style.color = "rgb(31, 30, 29)";
   document.getElementById("contactActive").style.color = "rgb(31, 30, 29)";
-  sectionOption().thirdSection();
-  colorNavigationBar().thirdSection();
+  sectionOptionController().thirdSection();
 }
 
 function updateStageFour() {
@@ -83,11 +80,11 @@ function updateStageFour() {
   document.getElementById("aboutActive").style.color = "rgb(230, 230, 230)";
   document.getElementById("servicesActive").style.color = "rgb(230, 230, 230)";
   document.getElementById("workActive").style.color = "rgb(230, 230, 230)";
-  sectionOption().fourthSection();
-  colorNavigationBar().fourthSection();
+  sectionOptionController().fourthSection();
+  
 }
 
-function sectionOption() {
+function sectionOptionController() {
   let toggleLogo = new Object();
   const BLOCK = "block";
   const NONE = "none";
@@ -97,21 +94,25 @@ function sectionOption() {
   toggleLogo.firstSection = function () {
     logoGray.style.display = NONE;
     logoBlack.style.display = BLOCK;
+    colorNavigationBar().firstSection();
   };
 
   toggleLogo.secondSection = function () {
     logoGray.style.display = BLOCK;
     logoBlack.style.display = NONE;
+    sectionOptionController().secondSection();
   };
 
   toggleLogo.thirdSection = function () {
     logoGray.style.display = NONE;
     logoBlack.style.display = BLOCK;
+    colorNavigationBar().thirdSection();
   };
 
   toggleLogo.fourthSection = function () {
     logoGray.style.display = BLOCK;
     logoBlack.style.display = NONE;
+    colorNavigationBar().fourthSection();
   };
   return toggleLogo;
 }
